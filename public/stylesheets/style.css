@@ -5,7 +5,20 @@ a{color:#00b4ff;text-decoration:none;outline:none;}
 a:hover{text-decoration:underline;}
 .hidden{display:none;}
 .right{float:right;}
-#albums{margin:50px auto 0 10px; width:100%;}
+#albums{
+  border: 1px solid #666;
+  height: auto;
+  overflow: hidden;
+  margin:50px auto;
+  padding: 20px;
+  width: 1024px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 5px #CCC inset, 1px 1px 10px #000;
+    -moz-box-shadow: 1px 1px 5px #CCC inset, 1px 1px 10px #000;
+    box-shadow: 1px 1px 5px #CCC inset, 1px 1px 10px #000;
+  }
 #f{position:absolute;bottom:0;width:100%;background:#eee;border-top:1px solid #e5e5e5;}
 #fc{margin:30px auto;width:524px;}
 #fc p{color:#9b9b9b;font-size:.75em;}
@@ -26,6 +39,9 @@ a:hover{text-decoration:underline;}
     position:relative;
     width: 300px;
 }
+#albums:last-child {
+  border-bottom: none;
+}
 .band-info p{
     overflow:hidden;
     display:block;
@@ -34,10 +50,10 @@ a:hover{text-decoration:underline;}
 }
 #album-image { float:left; margin-right: 10px; padding-bottom: 20px;}
 #album-image img {
+    height: 130px;
   -webkit-box-shadow: 1px 1px 5px #000;
     -moz-box-shadow: 1px 1px 5px #000;
     box-shadow: 1px 1px 5px #000;
-    height: 130px;
 }
 #album-name a {
   font-size: 18px;
