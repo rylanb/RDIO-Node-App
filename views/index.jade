@@ -1,0 +1,38 @@
+h1= title
+
+#albums
+  h2#tagline Heavy Rotation
+
+  noscript
+    .uh-oh
+      p You can't use this site without JavaScript!
+
+  - if(!session.oauth_access_token)
+    p
+      a(href='/oauth/login') Please Login!
+
+  #controls
+    #ctrl-play play
+    #ctrl-pause pause
+  .band-info
+    p
+      span#album-image
+      span#album-name
+      br
+      | By:
+      span#band-name
+  .band-more
+    p
+      a#next-song('data-action'='new',href="#") Next Song
+
+  - if(!session.oauth_access_token)
+    p Please Login!
+
+  #CTplayer
+
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js')
+script(src='https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js')
+script
+  var playbackToken = '#{playbackToken}';
+  var albums = !{JSON.stringify(albums)};
+script(src='/javascripts/narwhal.js')
