@@ -20,9 +20,8 @@ h1= title
             <img src="#{album.icon}" alt="#{album.name}" />
           span#album-name
             <a target="_blank" href="#{album.shortUrl}">#{album.name}</a>
-          br
-          | By: #{album.artist}
-          span#band-name
+          span#band-name|   #{album.artist}
+
     -})
 
   #CTplayer
