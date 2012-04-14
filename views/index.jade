@@ -1,32 +1,29 @@
 h1= title
 
+- if(!session.oauth_access_token)
+  p
+    a(href='/oauth/login') Please Login!
+
 #albums
   h2#tagline Heavy Rotation
 
-  noscript
-    .uh-oh
-      p You can't use this site without JavaScript!
 
-  - if(!session.oauth_access_token)
-    p
-      a(href='/oauth/login') Please Login!
 
   #controls
     #ctrl-play play
     #ctrl-pause pause
-  .band-info
-    p
-      span#album-image
-      span#album-name
-      br
-      | By:
-      span#band-name
-  .band-more
-    p
-      a#next-song('data-action'='new',href="#") Next Song
-
-  - if(!session.oauth_access_token)
-    p Please Login!
+  - if (albums.length)
+    - albums.forEach(function(album){
+      .band-info
+        p
+          span#album-image
+            <img src="#{album.icon}" alt="#{album.name}" />
+          span#album-name
+            <a target="_blank" href="#{album.shortUrl}">#{album.name}</a>
+          br
+          | By: #{album.artist}
+          span#band-name
+    -})
 
   #CTplayer
 

@@ -1,10 +1,11 @@
 html,body{padding:0;margin:0;}html{font-size:1em;}body{font-size:100%;}a img,:link img,:visited img{border:0;}
-p{padding:0;margin:0;font-family:Tahoma,Geneva,sans-serif;color:#515151;margin-bottom:10px;}
+h1 { padding: 0 10px;}
+p{padding: 0 10px;margin:0;font-family:Tahoma,Geneva,sans-serif;color:#515151;margin-bottom:10px;}
 a{color:#00b4ff;text-decoration:none;outline:none;}
 a:hover{text-decoration:underline;}
 .hidden{display:none;}
 .right{float:right;}
-#albums{margin:50px auto 0 20px; width:100%;}
+#albums{margin:50px auto 0 10px; width:100%;}
 #f{position:absolute;bottom:0;width:100%;background:#eee;border-top:1px solid #e5e5e5;}
 #fc{margin:30px auto;width:524px;}
 #fc p{color:#9b9b9b;font-size:.75em;}

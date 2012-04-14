@@ -20,6 +20,7 @@ function pickRandomSong() {
 }
 function changeSong() {
   //start the album
+  return false;
   last_state = null;
   var album = pickRandomSong();
   player.rdio_play(album.key);

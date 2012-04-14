@@ -1,6 +1,4 @@
-gnore bundler config
 /.bundle
 /vendor/bundle
 /.rvmrc
-/config/config.js
 .DS_Store
