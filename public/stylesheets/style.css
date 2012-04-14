@@ -18,16 +18,19 @@ a:hover{text-decoration:underline;}
 #ctrl-play{background-position:0 0;}
 #ctrl-pause{background-position:0 -52px;}
 .band-info{
+    border-bottom: 1px solid black;
     float: left;
-    height: 300px;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 30px;
     position:relative;
-    width:370px;
+    width: 300px;
 }
 .band-info p{
     overflow:hidden;
     display:block;
-    white-space:nowrap;
-    width: 370px;
+    white-space: normal;
+    width: auto;
 }
 #album-image { float:left; margin-right: 10px; padding-bottom: 20px;}
 #album-image img {
